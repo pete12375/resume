@@ -1,0 +1,266 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol, ul {
+  list-style: none;
+}
+blockquote, q {
+  quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+
+
+*, *:after, *:before {
+  box-sizing: border-box;
+}
+
+
+
+
+
+
+html {
+ /*  font-family: 'Roboto', sans-serif; */
+  font-family: sans-serif;
+  color: #444;
+  /* color: black; */
+}
+
+header a {
+  text-decoration: none;
+  flex-direction: row-reverse;
+  border-bottom: 1px solid white;
+  color: white;
+}
+
+header {
+  background-color: darkslategrey;
+}
+
+
+header h1 a {
+  margin-left: 0.5em;
+  font-weight: 300;
+  color: darkblue;
+}
+
+/* header nav li {
+  text-decoration: none;
+  list-style-type: none;
+  margin-right: 1em;
+  color: white;
+}
+
+header nav ul {
+  text-decoration: none;
+  display: flex;
+  padding-bottom: 0.45em;
+  color: white;
+} */
+
+
+
+
+
+
+
+
+
+main {
+  line-height: 1.5;
+  padding-top: 1em;
+}
+
+
+main img {
+  max-width: 100%;
+  height: auto;
+}
+
+
+#pete_hidden {
+  color: pink;
+  display: none;
+  visibility: hidden;
+  /* the browser will reserve space if above two lines no use*/
+}
+
+.hiddenj{
+  color: blue;
+}
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  border-top: 1px solid #444;
+}
+
+footer li {
+  list-style-type: none;
+}
+
+
+/*  mobile styles
+@media only screen and (min-width: 0) and (max-width: 40em) { 
+
+
+
+  header {
+    padding-bottom: .1em;
+  }
+
+  nav ul {
+    padding-left: 1em;
+  }
+
+  header h1 {
+    padding-top: .5em;
+  }
+} */
+
+
+
+
+
+
+/* mobile styles*/
+@media only screen and (min-width: 0) and (max-width: 600px){ 
+
+  button {
+    position: absolute ;
+    top: 10px;
+    right: 0.1em;
+    padding: 10px;
+    background-color: transparent;
+    border: none;
+    border: 1px solid white;
+  }
+
+  button:hover {
+    border: 1px solid black;
+    right: 0.5em;
+    padding: 10px;
+    position: absolute;
+    z-index: 1px;
+    background-color: lightblue;
+    cursor: pointer;
+  }
+
+  
+
+  [class^=line-] {
+    padding: 3px;
+    border-top: 2px solid black;
+    position: relative;
+  }
+  .line-1 {
+    width: 28px;
+  }
+  .line-2 {
+    width: 18px;
+    left: 10px;
+  }
+  .line-3 {
+    width: 8px;
+    left: 20px;
+  }
+  
+  .nav ul{
+    margin-top: 2em;
+    padding: 1em;
+    height: 100vh;
+    position: relative;
+    background-color: lightpink;
+  }
+
+  nav.menu-opened ul{
+    
+    transform: translateX(80vw);
+    animation: all;
+    
+  }
+
+  nav.menu-closed ul{
+    transform: translateX(100vw);
+    animation: all;
+  }
+
+
+}
+
+
+
+
+
+/* desktop styles */
+@media only screen and (min-width: 601px) { 
+
+  h1{
+    border: 1px solid blue;
+  }
+  button {
+    display: none;
+    visibility: hidden;
+  }
+
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+
+  main {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  main section {
+    flex-basis: 70%;
+    padding-right: 0.5em;
+  }
+
+  main aside {
+    flex-basis: 30%;
+    padding-left: 0.5em;
+  }
+
+}
