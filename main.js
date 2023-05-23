@@ -9,10 +9,13 @@ document.addEventListener("DOMContentLoaded", function() {
             menu ='opened';
             nav.classList.remove('menu-closed');
             nav.classList.add('menu-opened');
+            
+
         }else{
             menu = 'closed';
             nav.classList.remove('menu-opened');
             nav.classList.add('menu-closed');
+            
         }
 
     }, false)
@@ -20,27 +23,41 @@ document.addEventListener("DOMContentLoaded", function() {
 
 document.addEventListener("DOMContentLoaded", () => {
 
-        const myElement = document.getElementById("pete_click");
-        const hiddenElement = document.getElementById("pete_hidden");
-        //const hiddenElement = document.querySelector('.hiddenj'); //same as the selector in css (no "All" then only get the first element)
-        console.log(myElement);
-        //console.log(hiddenElement);
-        let x = 0;
-        myElement.addEventListener("click", function () {
-            console.log('clicked');
-            hiddenElement.remove("pete_hidden");
-            //hiddenElement.classList.add("hiddenj")
-            //hiddenElement.removeAttribute("id"); //delete the tag id then back to original
-            //myElement.setAttribute('id','hidden');
-            if (x % 2 == 0) {
-
-                myElement.setAttribute('id', 'hidden');
-                x++;
-            } else {
-                x++;
-            }
+        const clickLink = document.getElementById("pete_click");
+        const hiddenElement = document.querySelector(".pete_hidden");
+        console.log(clickLink);
+        let clicked = false;
+        clickLink.addEventListener("click", function () {
+          if ( clicked == false ) {
+            hiddenElement.classList.remove("pete_hidden");
+            clickLink.innerHTML = 'Show less &#8593';
+            hiddenElement.style.backgroundColor = "lightgray";
+            clicked = true;
+          } else {
+            hiddenElement.classList.add("pete_hidden");
+            clickLink.innerHTML = 'Read more &#8595';
+            clicked = false;
+          }
+          console.log('clicked');
+            
         }, false);
+    });
+
+    var backToTop = document.querySelector('#back-to-top');
+    window.addEventListener('scroll', function() {
+      if (window.pageYOffset > 10) {
+        backToTop.style.display = 'block';
+      } else {
+        backToTop.style.display = 'none';
+      }
+    });
+    backToTop.addEventListener('click', function(e) {
+      e.preventDefault();
+      window.scrollTo({top: 0, behavior: 'smooth'});
     });
 
 
 /* event.preventDefault(); */
+
+
+
