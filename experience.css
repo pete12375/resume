@@ -1,12 +1,7 @@
   * {
     box-sizing: border-box;
   }
-  
-  /* Set a background color */
-  body {
-    background-color: #ffd86e;
-    font-family: Helvetica, sans-serif;
-  }
+
   
   /* The actual timeline (the vertical ruler) */
   .timeline {
@@ -89,7 +84,7 @@
   
   /* Fix the circle for containers on the right side */
   .right::after {
-    left: -16px;
+    left: -13px;
   }
   
   /* The actual content */

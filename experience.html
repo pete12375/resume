@@ -43,11 +43,6 @@
 
         <main>
 
-
-          <!-- <div class="content">
-            <h1>Puppet Enterprise Learning Path [Mockup #1]</h1>
-          </div> -->
-
           <div class="timeline">
 
             <div class="container left">
@@ -95,10 +90,7 @@
             </div> -->
 
           </div>
-          
-          
-          
-          
+         
         </main>
 
         <footer>
@@ -112,7 +104,39 @@
 
         <a href="#top" id="back-to-top">&#8593;</a>
 
-        <script src="testing.js"></script>
+        <script>
+            var backToTop = document.querySelector('#back-to-top');
+            window.addEventListener('scroll', function() {
+              if (window.pageYOffset > 10) {
+                backToTop.style.display = 'block';
+              } else {
+                backToTop.style.display = 'none';
+              }
+            });
+            backToTop.addEventListener('click', function(e) {
+              e.preventDefault();
+              window.scrollTo({top: 0, behavior: 'smooth'});
+            });
+
+            document.addEventListener("DOMContentLoaded", function() {
+              const burgerbutton = document.getElementById('burgerbutton');
+              const nav = document.getElementById('nav')
+              let menu = 'closed';
+              burgerbutton.addEventListener('click', function(){
+                  console.log("clicked");
+                  if (menu == 'closed'){
+                      menu ='opened';
+                      nav.classList.remove('menu-closed');
+                      nav.classList.add('menu-opened');
+                  }else{
+                      menu = 'closed';
+                      nav.classList.remove('menu-opened');
+                      nav.classList.add('menu-closed');
+                  }
+
+              }, false)
+            });
+        </script>
     </body>
 
 
