@@ -1,6 +1,5 @@
 /* Light blue (#E9F1FA), bright blue (#00ABE4), white (#FFFFFF) */
-/*  #ffffff // #00171f // #003459 // #007ea7 // #00a8e8 */
-
+/*  #ffffff // #00171f // #003459 // #007ea7 // #00a8e8 // #fca311 orange*/
 
 header {
   padding: 1em;
@@ -14,14 +13,16 @@ header a {
 }
 
 header a:hover {
-  color: darkslategray;
-  border-bottom: 2px solid darkslategray;
+  color: #DC582A;
+  border-bottom: 2px solid #DC582A;
+  font-weight: bold;
 }
 
 header h1 a {
-  font-size: xx-large;
+  font-size: xxx-large;
   font-weight: bold;    
   margin-left: 0.5em;
+  font-family: monospace;
 }
 
 body {
@@ -30,9 +31,24 @@ body {
     flex-direction: column;
 }
 
-main {
-  max-width: 80rem;
-  margin: 0 auto;
+main h2 {
+  display: block;
+  font-size: 1.75em;
+  margin-top: 0.25em;
+  margin-bottom: 0.25em;
+  margin-left: 0;
+  margin-right: 0;
+  font-weight: bold;
+}
+
+main h3 { 
+  display: block;
+  font-size: 1.3em;
+  margin-top: 0.25em;
+  margin-bottom: 0.25em;
+  margin-left: 0;
+  margin-right: 0;
+  font-weight: bold;
 }
 
 footer {
@@ -47,8 +63,6 @@ footer {
 footer li {
   list-style-type: none;
 }
-
-
 
 /* mobile styles*/
 @media only screen and (min-width: 0) and (max-width: 600px){ 
@@ -147,7 +161,6 @@ footer li {
       padding: 0.3em ;
       text-align: center;
     }
-  
   }
   
   #back-to-top {

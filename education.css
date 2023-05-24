@@ -6,29 +6,9 @@
     main {
         line-height: 2;
         padding-top: 1em;
-        padding: 1em;
+        padding: 2em;
     }
-
-    main h2 {
-        display: block;
-        font-size: 1.75em;
-        margin-top: 0.25em;
-        margin-bottom: 0.25em;
-        margin-left: 0;
-        margin-right: 0;
-        font-weight: bold;
-    }
-
-    main h3 { 
-        display: block;
-        font-size: 1.3em;
-        margin-top: 0.25em;
-        margin-bottom: 0.25em;
-        margin-left: 0;
-        margin-right: 0;
-        font-weight: bold;
-    }
-
+    
     .timeline {
         position: relative;
         max-width: 1200px;
@@ -101,7 +81,7 @@
     }
 
     .right::after {
-    left: -16px;
+    left: -13px;
     }
 
     .content {
@@ -157,11 +137,4 @@
         padding-left: 0.5em;
     }
     }
-
-
-
-    #eduhtml {
-      border-bottom: 1px darkslategray;
-    }
-
       
