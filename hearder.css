@@ -3,25 +3,26 @@
 
 
 header {
-    padding: 1em;
-    background-color: #00a8e8;
-  }
-  
-  header a {
-    text-decoration: none;
-    color: white;
-    font-size: larger;
-  }
+  padding: 1em;
+  background-color: #00a8e8;
+}
 
-  header a:hover {
-    color: darkslategray;
-  }
-  
-  header h1 a {
-    font-size: xx-large;
-    font-weight: bold;    
-    margin-left: 0.5em;
-  }
+header a {
+  text-decoration: none;
+  color: white;
+  font-size: larger;
+}
+
+header a:hover {
+  color: darkslategray;
+  border-bottom: 2px solid darkslategray;
+}
+
+header h1 a {
+  font-size: xx-large;
+  font-weight: bold;    
+  margin-left: 0.5em;
+}
 
 
 
@@ -102,13 +103,18 @@ header {
       max-width: 30px;
     }
 
+    main {
+      max-width: 80rem;
+      margin: 0 auto;
+    }
   
   }
   footer {
     padding: 1em;
     display: flex;
     justify-content: space-between;
-    border-top: 1px solid #444;
+    border-top: 1px solid #e5e5e5;
+    background-color: #e5e5e5;
   }
   
   footer li {

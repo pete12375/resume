@@ -1,52 +1,22 @@
-$(function(){
 
-    window.sr = ScrollReveal();
-  
-    if ($(window).width() < 768) {
-  
-        if ($('.timeline-content').hasClass('js--fadeInLeft')) {
-            $('.timeline-content').removeClass('js--fadeInLeft').addClass('js--fadeInRight');
-        }
-  
-        sr.reveal('.js--fadeInRight', {
-          origin: 'right',
-          distance: '300px',
-          easing: 'ease-in-out',
-          duration: 800,
-        });
-  
-    } else {
-        
-        sr.reveal('.js--fadeInLeft', {
-          origin: 'left',
-          distance: '300px',
-            easing: 'ease-in-out',
-          duration: 800,
-        });
-  
-        sr.reveal('.js--fadeInRight', {
-          origin: 'right',
-          distance: '300px',
-          easing: 'ease-in-out',
-          duration: 800,
-        });
-  
-    }
-    
-    sr.reveal('.js--fadeInLeft', {
-          origin: 'left',
-          distance: '300px',
-            easing: 'ease-in-out',
-          duration: 800,
-        });
-  
-        sr.reveal('.js--fadeInRight', {
-          origin: 'right',
-          distance: '300px',
-          easing: 'ease-in-out',
-          duration: 800,
-        });
-  
-  
-  });
-  
+document.addEventListener("DOMContentLoaded", function() {
+  const burgerbutton = document.getElementById('burgerbutton');
+  const nav = document.getElementById('nav')
+  let menu = 'closed';
+  burgerbutton.addEventListener('click', function(){
+      console.log("clicked");
+      if (menu == 'closed'){
+          menu ='opened';
+          nav.classList.remove('menu-closed');
+          nav.classList.add('menu-opened');
+          
+
+      }else{
+          menu = 'closed';
+          nav.classList.remove('menu-opened');
+          nav.classList.add('menu-closed');
+          
+      }
+
+  }, false)
+});
