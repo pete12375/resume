@@ -13,8 +13,8 @@ header a {
 }
 
 header a:hover {
-  color: #DC582A;
-  border-bottom: 2px solid #DC582A;
+  color: #f79256;
+  border-bottom: 2px solid #f79256;
   font-weight: bold;
 }
 
@@ -66,7 +66,7 @@ footer li {
 
 /* mobile styles*/
 @media only screen and (min-width: 0) and (max-width: 600px){ 
-    button {
+    #burgerbutton {
       position: absolute ;
       top: 1em;
       right: 1em;
@@ -76,7 +76,7 @@ footer li {
       z-index: 100;
     }
   
-    button:hover {
+    #burgerbutton:hover {
       cursor: pointer;
     }
   
@@ -99,7 +99,7 @@ footer li {
       width: 8px;
       left: 20px;
     }
-    
+
     header nav {
       position: absolute;
       top: 0;
@@ -144,7 +144,7 @@ footer li {
 
   /* desktop styles */
 @media only screen and (min-width: 601px) { 
-    button {
+    #burgerbutton {
       display: none;
       visibility: hidden;
     }
@@ -154,6 +154,7 @@ footer li {
       justify-content: space-between;
       align-items: flex-end;
     }
+
     header nav ul li {
       text-decoration: none;
       list-style: none ;

@@ -7,11 +7,7 @@ html {
 }
 
 body {
-  background-image: url('back.jpeg');
-  position: relative;    
-  width: 100%;    
-  min-height: 100vh;    
-  transition: background-color .5s;
+  background: linear-gradient(to bottom, #00a8e8 10%, #caf0f8 70%);
 }
 
 main {
@@ -26,7 +22,7 @@ main img {
 }
 
 #pete_click {
-  color: blue; 
+  color: blue;
 }
 
 .pete_hidden {

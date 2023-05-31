@@ -22,10 +22,8 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 document.addEventListener("DOMContentLoaded", () => {
-
         const clickLink = document.getElementById("pete_click");
         const hiddenElement = document.querySelector(".pete_hidden");
-        console.log(clickLink);
         let clicked = false;
         clickLink.addEventListener("click", function () {
           if ( clicked == false ) {
@@ -38,8 +36,6 @@ document.addEventListener("DOMContentLoaded", () => {
             clickLink.innerHTML = 'Read more &#8595';
             clicked = false;
           }
-          console.log('clicked');
-            
         }, false);
     });
 

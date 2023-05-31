@@ -1,0 +1,172 @@
+html {
+  font-family: sans-serif;
+  color: #444;
+  letter-spacing: 1.5px;
+}
+
+body {
+  background: linear-gradient(to bottom, #00a8e8 10%, #f79256 100%);
+}
+
+body, button, input {
+  font-weight: 500;
+}
+
+.background {
+  display: flex;
+  min-height: 100vh;
+}
+
+.container {
+  flex: 0 1 700px;
+  margin: auto;
+  padding: 10px;
+}
+
+.screen {
+  position: relative;
+  background-color: #3e3e3e;
+  border-radius: 15px;
+}
+
+.screen:after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 20px;
+  right: 20px;
+  bottom: 0;
+  border-radius: 15px;
+  box-shadow: 0 20px 40px rgba(10, 10, 10, 0.4);
+  z-index: -1;
+}
+
+.screen-body {
+  display: flex;
+}
+
+.screen-body-item {
+  flex: 1;
+  padding: 40px;
+  padding-top: 60px;
+  padding-bottom: 50px;
+}
+
+.screen-body-item.left {
+  display: flex;
+  flex-direction: column;
+}
+
+.app-title {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  color: #f79256;
+  font-size: 26px;
+}
+
+.app-title:after {
+  content: '';
+  display: block;
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+  width: 20px;
+  height: 3px;
+  background: #f79256;
+}
+
+.app-contact {
+  margin-top: 3em;
+  font-size: 13.5px;
+  color: whitesmoke;
+  letter-spacing: 1.2px;
+}
+
+.app-form-group {
+  margin-bottom: 15px;
+}
+
+.app-form-group-message {
+  margin-top: 40px;
+}
+
+.app-form-group-buttons button{
+  margin-bottom: 0;
+  text-align: right;
+}
+
+.app-form-control {
+  width: 100%;
+  padding: 10px 0;
+  background: none;
+  border: none;
+  border-bottom: 1px solid #666;
+  color: whitesmoke;
+  font-size: 14px;
+  text-transform: uppercase;
+  outline: none;
+  transition: border-color .2s;
+}
+
+.app-form-control::-moz-placeholder {
+  color: #666;
+}
+
+.app-form-control:-ms-input-placeholder {
+  color: #666;
+}
+
+.app-form-control::placeholder {
+  color: #666;
+}
+
+.app-form-control:focus {
+  border-bottom-color: whitesmoke;
+}
+
+.app-form-button {
+  background: none;
+  border: none;
+  color: whitesmoke;
+  font-size: 14px;
+  cursor: pointer;
+  outline: none;
+  margin-top: 3em;
+  margin-left: 3em;
+}
+
+.app-form-button:hover {
+  color: #f79256;
+}
+
+@media screen and (max-width: 600px) {
+  .screen-body {
+    flex-direction: column;
+  }
+
+  .screen-body-item.left {
+    margin-bottom: 30px;
+  }
+
+  .app-title {
+    flex-direction: row;
+  }
+
+  .app-title span {
+    margin-right: 12px;
+  }
+
+  .app-title:after {
+    display: none;
+  }
+
+  .screen-body {
+    padding: 40px;
+  }
+
+  .screen-body-item {
+    padding: 0;
+  }
+}

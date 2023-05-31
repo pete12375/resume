@@ -4,11 +4,7 @@ html {
 }
 
 body {
-  background-image: url('back.jpeg');
-  position: relative;    
-  width: 100%;    
-  min-height: 100vh;    
-  transition: background-color .5s;
+  background: linear-gradient(to bottom, #00a8e8 5%, #e0fbfc 80%);
 }
 
 main {
@@ -107,10 +103,27 @@ main {
   background-color: white;
   position: relative;
   border-radius: 6px;
-  }
+}
+
+#click {
+  color: blue;
+}
+
+#click1 {
+  color: blue;
+}
+
+[class^=hidden] {
+  display: none;
+  visibility: hidden;
+}
 
 /* Media queries - Responsive timeline on screens less than 600px wide */
 @media screen and (max-width: 600px) {
+  body {
+    background: linear-gradient(to bottom, #00a8e8 0%, #14213d 100%);
+  }
+
   main {
     display: block;
     justify-content: space-between;

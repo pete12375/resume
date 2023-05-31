@@ -16,7 +16,7 @@
         <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap" rel="stylesheet">
         
         <link rel="stylesheet" href="reset.css">
-        <link rel="stylesheet" href="hearder.css">
+        <link rel="stylesheet" href="header.css">
         <link rel="stylesheet" href="experience.css">
     </head>
     <body>
@@ -33,7 +33,7 @@
                     <li><a href='#'>Interest</a></li>
                     <li><a style="color:#00171f; border-bottom: 2px solid #00171f;" href='./experience.html'>Experience</a></li>
                     <li><a href='./education.html'>Education</a></li>
-                    <li><a href='#'>Contact</a></li>
+                    <li><a href='./contact.html'>Contact</a></li>
                 </ul>
             </nav>
         </header>
@@ -47,12 +47,13 @@
                 <h2>Dec 2020 - Current</h2>
                 <h3>Resolve Technology Ltd.</h3>
                 <p>Start working as a part-time engineer.</p>
-                <p id="click"> Details below&#8595</p>
-                <li class="hidden">Conducted reports and documents on various projects, including software development, infrastructure, and network design</li>
-                <li class="hidden">Interacted with multiple divisions to perform in-house cooperating and communicating enhancement</li>
-                <li class="hidden">Sought to improve the performance of existing computer systems and software</li>
-                <li class="hidden">Participated in developing new products or solving practical computing problems</li>
-                
+                <p id="click"> Details Below &#8595</p>
+                <div class="hidden">
+                <li>Conducted reports and documents on various projects, including software development, infrastructure, and network design</li>
+                <li>Interacted with multiple divisions to perform in-house cooperating and communicating enhancement</li>
+                <li>Sought to improve the performance of existing computer systems and software</li>
+                <li>Participated in developing new products or solving practical computing problems</li>
+                </div>
               </div>
             </div>
 
@@ -61,10 +62,12 @@
                 <h2>Oct - Dec 2020</h2>
                 <h3>College of Professional and Continuing Education Limited (CPCE)</h3>
                 <p>Worked as an Student Tutor.</p>
-                <p id="click"> Details below&#8595</p>
-                <li class="hidden">Participated in Online Programming Learning Centre (Microsoft Teams)</li>
-                <li class="hidden">Provided consultation and support on C++ and Java programming to current computing students</li>
-                <li class="hidden">Assisted in teaching the new skills of code development to students</li>
+                <p id="click1"> Details below &#8595</p>
+                <div class="hidden1">
+                  <li>Participated in Online Programming Learning Centre (Microsoft Teams)</li>
+                  <li>Provided consultation and support on C++ and Java programming to current computing students</li>
+                  <li>Assisted in teaching the new skills of code development to students</li>
+                </div>
               </div>
             </div>
 
@@ -83,8 +86,6 @@
               </div>
             </div>
           </div>
-
-
          
         </main>
 
@@ -118,7 +119,6 @@
               const nav = document.getElementById('nav')
               let menu = 'closed';
               burgerbutton.addEventListener('click', function(){
-                  console.log("clicked");
                   if (menu == 'closed'){
                       menu ='opened';
                       nav.classList.remove('menu-closed');
@@ -128,8 +128,41 @@
                       nav.classList.remove('menu-opened');
                       nav.classList.add('menu-closed');
                   }
-
               }, false)
+            });
+
+            document.addEventListener("DOMContentLoaded", () => {
+              const clickLink = document.getElementById("click");
+              const hiddenElement = document.querySelector(".hidden");
+              let clicked = false;
+              clickLink.addEventListener("click", function () {
+                if ( clicked == false ) {
+                  hiddenElement.classList.remove("hidden");
+                  clickLink.innerHTML = 'Details Below &#8593';
+                  clicked = true;
+                } else {
+                  hiddenElement.classList.add("hidden");
+                  clickLink.innerHTML = 'Details Below &#8595';
+                  clicked = false;
+                }
+              }, false);
+            });
+
+            document.addEventListener("DOMContentLoaded", () => {
+              const clickLink = document.getElementById("click1");
+              const hiddenElement = document.querySelector(".hidden1");
+              let clicked = false;
+              clickLink.addEventListener("click", function () {
+                if ( clicked == false ) {
+                  hiddenElement.classList.remove("hidden1");
+                  clickLink.innerHTML = 'Details Below &#8593';
+                  clicked = true;
+                } else {
+                  hiddenElement.classList.add("hidden1");
+                  clickLink.innerHTML = 'Details Below &#8595';
+                  clicked = false;
+                }
+              }, false);
             });
         </script>
     </body>
