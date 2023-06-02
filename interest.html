@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang='en'>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+        <link rel="apple-touch-icon" sizes="180x180" href="./favicon/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="./favicon/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="./favicon/favicon-16x16.png">
+
+
+        <title>Pete's Experience</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+        
+        <link rel="stylesheet" href="reset.css">
+        <link rel="stylesheet" href="header.css">
+        <link rel="stylesheet" href="interest.css">
+    </head>
+    <body>
+        <header>
+            <h1><a href='./index.html'>Pete Ng</a></h1>
+            <nav id="nav" class="menu-closed">
+                <button id="burgerbutton">
+                    <div class="line-1"></div>
+                    <div class="line-2"></div>
+                    <div class="line-3"></div>
+                </button>
+                <ul>
+                    <li><a href='./index.html'>About Me</a></li>
+                    <li><a style="color:#00171f; border-bottom: 2px solid #00171f;" href='./interest.html'>Interest</a></li>
+                    <li><a href='./experience.html'>Experience</a></li>
+                    <li><a href='./education.html'>Education</a></li>
+                    <li><a href='./contact.html'>Contact</a></li>
+                </ul>
+            </nav>
+        </header>
+
+
+        <main>
+            <div class="flex-container">
+                <div class="container-content">1</div>
+                <div class="container-content">2</div>
+                <div class="container-content">3</div>
+                <div class="container-content">4</div>
+            </div>
+        </main>
+
+
+        <footer>
+            <p>&copy; P. Ng</p>
+            <nav>
+                <ul>
+                    <li><a href='imprint'>Imprint</a></li>
+                </ul>
+            </nav>
+        </footer>
+        <a href="#top" id="back-to-top">&#8593;</a>
+
+        <script>
+            var backToTop = document.querySelector('#back-to-top');
+            window.addEventListener('scroll', function() {
+              if (window.pageYOffset > 10) {
+                backToTop.style.display = 'block';
+              } else {
+                backToTop.style.display = 'none';
+              }
+            });
+            backToTop.addEventListener('click', function(e) {
+              e.preventDefault();
+              window.scrollTo({top: 0, behavior: 'smooth'});
+            });
+
+            document.addEventListener("DOMContentLoaded", function() {
+              const burgerbutton = document.getElementById('burgerbutton');
+              const nav = document.getElementById('nav')
+              let menu = 'closed';
+              burgerbutton.addEventListener('click', function(){
+                  if (menu == 'closed'){
+                      menu ='opened';
+                      nav.classList.remove('menu-closed');
+                      nav.classList.add('menu-opened');
+                  }else{
+                      menu = 'closed';
+                      nav.classList.remove('menu-opened');
+                      nav.classList.add('menu-closed');
+                  }
+              }, false)
+            });
+        </script>
+    </body>
+</html>
+        
