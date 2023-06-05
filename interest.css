@@ -7,18 +7,32 @@ body {
     background: linear-gradient(to bottom, #00a8e8 10%, #f79256 100%);
 }
 
+main {
+    display: block;
+    justify-content: space-between;
+}
+
 .flex-container {
+    width: 1200px;
     display: flex;
     flex-wrap: wrap;
-  }
-  
+    margin: 0 auto;
+    width: 80%;
+}
+.container-content img {
+    object-fit: cover;
+    width: 80%;
+}
+
  .flex-container > div {
     background-color: whitesmoke;
-    margin: 2em;
-    text-align: center;
-    line-height: 50px;
-    flex: 30%;
-    box-shadow: 0 0 0 1px black;
     position: relative;
+    margin: 1em;
+    padding: 1em;
+    text-align: center;
+    line-height: 1em;
+    flex: 40%;
+    /* box-shadow: 0 0 0 1px black; */
+    box-shadow: 0 20px 40px lightslategray;
     border-radius: 15px;
 }
