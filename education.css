@@ -91,7 +91,7 @@
     border-radius: 6px;
     }
 
-    @media only screen and (min-width: 0) and (max-width: 600px) {
+    @media only screen and (max-width: 600px) {
     .timeline::after {
     left: 31px;
     }
@@ -121,11 +121,6 @@
 
     /* desktop styles */
     @media only screen and (min-width: 601px) { 
-    main {
-        display: block;
-        justify-content: space-between;
-    }
-
     main section {
         padding-top: 0.1px;
         flex-basis: 70%;
@@ -137,4 +132,4 @@
         padding-left: 0.5em;
     }
     }
-      
+    

@@ -124,11 +124,6 @@ main {
     background: linear-gradient(to bottom, #00a8e8 0%, #14213d 100%);
   }
 
-  main {
-    display: block;
-    justify-content: space-between;
-  }
-
   main section {
     padding-top: 0.1px;
     flex-basis: 70%;
