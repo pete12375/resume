@@ -15,7 +15,7 @@ header a {
 header a:hover {
   color: #f79256;
   border-bottom: 2px solid #f79256;
-  font-weight: bold;
+  
 }
 
 header h1 a {

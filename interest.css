@@ -69,14 +69,23 @@ main {
   
   .text {
     color: white;
-    font-size: 20px;
+    font-size: 18px;
+    line-height: 1em;
     position: absolute;
+    text-align: center;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
   }
 
+  .text a {
+    color: #f79256;
+    text-decoration: none;
+    font-size: 15px;
+    border-bottom: 1px solid #f79256;
+  }
+  
 @media screen and (max-width: 600px) {
     .container-content {
         flex-basis: 100%;
