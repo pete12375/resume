@@ -19,6 +19,7 @@ main {
     flex-wrap: wrap;
     margin: 0 auto;
     justify-content: center;
+    padding-top: 2em;
 }
 
 .container-content {
@@ -91,6 +92,11 @@ main {
         flex-basis: 100%;
         padding-left: 70px;
         padding-right: 25px;
+    }
+
+    main {
+        padding-left: 1em;
+        padding-right: 1em;
     }
 }
 
