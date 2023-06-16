@@ -12,6 +12,14 @@ main {
     justify-content: space-between;
     padding-left: 1em;
     padding-right: 1em;
+    color: #003459; 
+}
+
+section h3 {
+    font-size: 4vw;
+    padding-top: 1em;
+    font-weight: 600;
+    text-align: center;
 }
 
 .flex-container {
@@ -21,7 +29,8 @@ main {
     flex-wrap: wrap;
     margin: 0 auto;
     justify-content: center;
-    padding-top: 1em;
+    padding: 0.5em 0 1em 0;
+    border-bottom: 5px dotted #003459;
 }
 
 .container-content {
@@ -41,7 +50,7 @@ main {
     position: relative;
     margin: 1.5em;
     padding: 1px;
-    line-height: 1em;
+    line-height: 1.5em;
     box-shadow: 0 20px 40px lightslategray;
 }
 
@@ -70,7 +79,7 @@ main {
 .text {
     color: white;
     font-size: 18px;
-    line-height: 1em;
+    line-height: 1.5em;
     position: absolute;
     text-align: center;
     top: 50%;
@@ -92,6 +101,12 @@ main {
         padding-left: 70px;
         padding-right: 25px;
     }
+
+    section h3 {
+        font-size: 8vw;
+        font-weight: 800;
+        text-align: center;
+    }
 }
 
 @media only screen and (min-width: 601px) { 
@@ -99,16 +114,9 @@ main {
         max-width: 90rem;
         margin: 0 auto;
     }
-    
+
     section {
         max-width: 80rem;
         margin: 0 auto;
     }
 }
-
-
-   /*
-  flex-base: 50%
-  flex-grow: 0;
-  flex-shrink: 0;
-  */
