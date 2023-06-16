@@ -1,6 +1,6 @@
 /* Light blue (#E9F1FA), bright blue (#00ABE4), white (#FFFFFF) */
 /*  #ffffff // #00171f // #003459 // #007ea7 // #00a8e8 // #fca311 orange*/
-html{
+html {
   scroll-behavior: smooth;
 }
 
@@ -62,9 +62,6 @@ footer {
   margin-top: auto;
 }
 
-footer li {
-  list-style-type: none;
-}
 
 #back-to-top {
   display: none;
