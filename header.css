@@ -1,5 +1,8 @@
 /* Light blue (#E9F1FA), bright blue (#00ABE4), white (#FFFFFF) */
 /*  #ffffff // #00171f // #003459 // #007ea7 // #00a8e8 // #fca311 orange*/
+html{
+  scroll-behavior: smooth;
+}
 
 header {
   padding: 1em;
@@ -55,8 +58,7 @@ footer {
   padding: 1em;
   display: flex;
   justify-content: space-between;
-  border-top: 1px solid #e5e5e5;
-  background-color: #e5e5e5;
+  border-top: 1px solid #444;
   margin-top: auto;
 }
 
@@ -64,7 +66,16 @@ footer li {
   list-style-type: none;
 }
 
-/* mobile styles*/
+#back-to-top {
+  display: none;
+  position: fixed;
+  text-align: center;
+  background: #333;
+  color: #fff;
+  border-radius: 50%;
+  z-index: 100;
+}
+
 @media only screen and (min-width: 0) and (max-width: 600px){ 
     #burgerbutton {
       position: absolute ;
@@ -144,7 +155,6 @@ footer li {
     } 
   }
 
-  /* desktop styles */
 @media only screen and (min-width: 601px) { 
     #burgerbutton {
       display: none;
@@ -173,14 +183,3 @@ footer li {
       line-height: 50px;
     }
   }
-  
-
-#back-to-top {
-  display: none;
-  position: fixed;
-  text-align: center;
-  background: #333;
-  color: #fff;
-  border-radius: 50%;
-  z-index: 100;
-}

@@ -13,14 +13,12 @@ main {
   padding: 1em;
 }
 
-/* The actual timeline (the vertical ruler) */
 .timeline {
   position: relative;
   max-width: 1200px;
   margin: 0 auto;
 }
 
-/* The actual timeline (the vertical ruler) */
 .timeline::after {
   content: '';
   position: absolute;
@@ -32,7 +30,6 @@ main {
   margin-left: -3px;
 }
 
-/* Container around content */
 .container {
   padding: 10px 50px;
   position: relative;
@@ -40,7 +37,6 @@ main {
   width: 50%;
 }
 
-/* The circles on the timeline */
 .container::after {
   content: '';
   position: absolute;
@@ -54,17 +50,14 @@ main {
   z-index: 10;
 }
 
-/* Place the container to the left */
 .left {
   left: 0;
 }
 
-/* Place the container to the right */
 .right {
   left: 50%;
 }
 
-/* Add arrows to the left container (pointing right) */
 .left::before {
   content: " ";
   height: 0;
@@ -78,7 +71,6 @@ main {
   border-color: transparent transparent transparent white;
 }
 
-/* Add arrows to the right container (pointing left) */
 .right::before {
   content: " ";
   height: 0;
@@ -92,12 +84,10 @@ main {
   border-color: transparent white transparent transparent;
 }
 
-/* Fix the circle for containers on the right side */
 .right::after {
   left: -13px;
 }
 
-/* The actual content */
 .content {
   padding: 20px 30px;
   background-color: white;
@@ -118,7 +108,6 @@ main {
   visibility: hidden;
 }
 
-/* Media queries - Responsive timeline on screens less than 600px wide */
 @media screen and (max-width: 600px) {
   body {
     background: linear-gradient(to bottom, #00a8e8 0%, #14213d 100%);
@@ -135,19 +124,16 @@ main {
     padding-left: 0.5em;
   }
 
-/* Place the timelime to the left */
   .timeline::after {
     left: 31px;
   }
 
-/* Full-width containers */
   .container {
     width: 100%;
     padding-left: 70px;
     padding-right: 25px;
   }
 
-/* Make sure that all arrows are pointing leftwards */
   .container::before {
     left: 60px;
     border: medium solid white;
@@ -155,12 +141,10 @@ main {
     border-color: transparent white transparent transparent;
   }
 
-/* Make sure all circles are at the same spot */
   .left::after, .right::after {
     left: 15px;
   }
-
-/* Make all right containers behave like the left ones */
+  
   .right {
     left: 0%;
   }

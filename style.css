@@ -12,7 +12,6 @@ body {
 
 main {
   line-height: 1.5;
-  padding-top: 1em;
   display: block;
   justify-content: space-between;
 }
@@ -20,6 +19,64 @@ main {
 main img {
   width: 100%;
   height: auto;
+}
+
+#welcome-h1 { 
+  padding-top: 1em;
+  margin-bottom: 1em;
+  color: #111; 
+  font-size: 40px; 
+  font-weight: 300; 
+  line-height: 1em; 
+  text-align: center; 
+}
+
+.animation {
+  display: block;
+  height: 2em;
+  overflow: hidden;
+}
+
+.animation > div > div {
+  height: 3rem;
+  margin-bottom: 3rem;
+  display: inline-block;
+}
+
+.animation div:first-child {
+  animation: text-animation 8s infinite;
+}
+
+@keyframes text-animation {
+  0% {margin-top: 0;}
+  10% {margin-top: 0;}
+  20% {margin-top: -5.62rem;}
+  30% {margin-top: -5.62rem;}
+  40% {margin-top: -11.24rem;}
+  60% {margin-top: -11.24rem;}
+  70% {margin-top: -5.62rem;}
+  80% {margin-top: -5.62rem;}
+  90% {margin-top: 0;}
+  100% {margin-top: 0;}
+}
+
+.circular--portrait { 
+  margin-top: 1em;
+  position: relative; 
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+  box-shadow: 0 20px 40px lightslategray;
+  width: 180px; 
+  height: 180px; 
+  overflow: hidden; 
+  border-radius: 50%; 
+} 
+
+.circular--portrait img { 
+  width: 100%; 
+  height: auto; 
 }
 
 .flex-container {
@@ -31,80 +88,118 @@ main img {
   padding-top: 1em;
 }
 
+.flex-container > div {
+  background-color: #003459;
+  position: relative;
+  margin: 1em;
+  padding: 1.5em;
+  line-height: 1em;
+  box-shadow: 0 20px 40px lightslategray;
+  border-radius: 12px;
+}
+
 .container-content {
   position: relative;
-  flex-basis: 33%;
-  max-height: 400px;
+  flex-grow: 3;
+  max-height: 800px;
   max-width: 400px;
 }
 
-.container-content img {
-  object-fit: cover;
-  width: 100%;
-  height: 100%;
-}
-
-.flex-container > div {
-  background-color: whitesmoke;
-  position: relative;
-  margin: 1.5em;
-  padding: 1px;
-  line-height: 1em;
-  box-shadow: 0 20px 40px lightslategray;
-}
-
-.image {
-  width: 100%;
-  height: auto;
-}
-
-.overlay {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 100%;
-  width: 100%;
-  opacity: 0;
-  transition: .5s ease;
-  background-color: #003459;
-  }
-
-.container-content:hover .overlay {
-  opacity: 0.85;
-}
-
-.text {
+.container-content > h3 {
   color: white;
-  font-size: 18px;
+  text-align: left;
+  font-size: 30px;
+  font-weight: 300; 
   line-height: 1em;
-  position: absolute;
-  text-align: center;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
 }
 
-.text a {
-  color: #f79256;
-  text-decoration: none;
-  font-size: 15px;
-  border-bottom: 1px solid #f79256;
+.info {
+  color: white;
+  text-align: left;
+  font-size: 20px;
+  font-weight: 400; 
+  line-height: 1.5em;
+}
+
+.skills-tags{
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 12px;
+  column-gap: 12px;
+}
+
+.skill {
+  font-size: 18px;
+  padding: 10px;
+  color: white;
+  background: #f79256;
+  border: 2px solid #222222;
+  border-radius: 10px;
+  position: relative;
+}
+
+.self-intro {
+  margin: 2em 0 2em 0;
+  padding: 1em;
+  color: #003459; 
+  border-top: 3px dotted #f79256;
+  border-bottom: 3px dotted #f79256;
+}
+
+.self-intro > p {
+  border: 4px dotted #003459;
+  border-radius: 12px;
+  padding: 0.5em 1em 0.5em 1em;
+  margin: 0 1em 1em 1em;
+  font-size: 2.5vw;
+  font-weight: 300; 
+  line-height: 1.5em; 
+  text-align: left; 
+}
+
+.self-intro > h1 {
+  padding-left: 0.5em;
+  font-size: 3vh;
+  font-weight: 400; 
+}
+
+.hometown {
+  color: #003459; 
+}
+
+.hometown > h1 {
+  padding-left: 0.5em;
+  font-size: 4vw;
+  font-weight: 400;
+}
+
+.hometown > h2 {
+  padding-left: 1em;
+  font-size: 2.5vw;
 }
 
 #pete_click {
+  font-size: 2vw;
+  padding-left: 2em;
   color: blue;
 }
 
 .pete_hidden {
   display: none;
   visibility: hidden;
-  background-color: lightgray;
 }
 
+
 @media only screen and (max-width: 600px) { 
+
+  #welcome-h1 { 
+    font-size: 5vw; 
+  }
+
+  .self-intro > p {
+    font-size: 3.5vw;    
+  }
+
   .container-content {
     flex-basis: 100%;
     padding-left: 70px;

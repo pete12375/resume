@@ -29,7 +29,12 @@ document.addEventListener("DOMContentLoaded", () => {
           if ( clicked == false ) {
             hiddenElement.classList.remove("pete_hidden");
             clickLink.innerHTML = 'Show less &#8593';
-            hiddenElement.style.backgroundColor = "lightgray";
+            hiddenElement.style.border = "2px dotted #003459";
+            hiddenElement.style.padding = "0.5em";
+            hiddenElement.style.margin = "0.5em 1em 0.5em 1em";
+            hiddenElement.style.borderRadius = "12px";
+            hiddenElement.style.fontSize = "2vw";
+            hiddenElement.style.fontWeight = "200";
             clicked = true;
           } else {
             hiddenElement.classList.add("pete_hidden");
